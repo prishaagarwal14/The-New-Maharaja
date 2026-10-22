@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The New Maharaja | A Diwali Capsule Concept by Prisha Agarwal</title>
+<meta name="description" content="The New Maharaja: an independent student design concept reimagining Indian royal heritage as a limited-edition Diwali home and lifestyle collection with a streetwear edge.">
+<meta property="og:title" content="The New Maharaja — Heritage for a new generation">
+<meta property="og:description" content="A conceptual Diwali capsule collection: statement furniture, homewear, textiles, tableware and a collectible telephone.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/page1.png">
+<meta name="theme-color" content="#110907">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#300b0e;--wine2:#270b0e;--dark:#110907;--ink:#0b0605;--gold:#d9b680;--cream:#f1dfc4;--muted:#d7c3ae;--red:#d22d34;--line:#473027}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--dark);color:var(--cream);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+::selection{background:var(--gold);color:var(--dark)}
+
+/* progress bar */
+#bar{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold),var(--red));z-index:50}
+
+/* nav */
+nav{position:fixed;z-index:40;top:0;width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 5%;background:linear-gradient(#100806ee,transparent);font-size:11px;letter-spacing:.17em;text-transform:uppercase;transition:background .3s,padding .3s}
+nav.solid{background:#110907f2;backdrop-filter:blur(8px);padding:14px 5%}
+.brand{font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:.07em}
+.brand b{color:var(--red);font-family:Arial,sans-serif;font-size:20px}
+nav .links{display:flex;gap:28px}
+nav .links a{opacity:.85;transition:.2s;position:relative}
+nav .links a::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--gold);transition:width .3s}
+nav .links a:hover{opacity:1;color:var(--gold)}
+nav .links a:hover::after{width:100%}
+
+/* type */
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400}
+h1{font-size:clamp(46px,7.2vw,112px);line-height:.88;margin:14px 0 18px;letter-spacing:-.01em}
+h2{font-size:clamp(40px,5.6vw,84px);line-height:.98;margin:12px 0 24px}
+h3{font-size:clamp(30px,3.4vw,46px);margin:0 0 12px;line-height:1.05}
+.eyebrow{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold)}
+em.i{font-style:italic;color:var(--gold)}
+p{margin:0 0 16px}
+.lead,.split p{max-width:520px;font-size:15px;line-height:1.95;color:var(--muted)}
+.center{text-align:center}
+.center .lead{margin:0 auto 16px}
+.note{font-size:12px;letter-spacing:.2em;color:#c7aa8b;text-transform:uppercase}
+section{padding:120px 7%;position:relative}
+.alt{background:var(--wine2)}
+.rule{width:60px;height:1px;background:var(--gold);margin:22px 0}
+.center .rule{margin:22px auto}
+
+/* hero */
+.hero{height:100svh;min-height:680px;position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;text-align:center;background:#1a0b0a}
+.hero .bg{position:absolute;inset:0;background:url('assets/page1.png') center top/cover;animation:zoom 22s ease-out forwards;will-change:transform}
+@keyframes zoom{from{transform:scale(1.07)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#110907 0%,#110907d9 14%,#11090700 46%),linear-gradient(180deg,#11090766,transparent 14%)}
+.hero-copy{position:relative;z-index:2;padding:0 15px 9vh;text-shadow:0 2px 30px #000}
+.hero-copy p{letter-spacing:.2em;text-transform:uppercase;font-size:11px;margin:0}
+.cta{display:inline-block;margin-top:28px;padding:15px 32px;border:1px solid var(--gold);font-size:10px;letter-spacing:.22em;text-transform:uppercase;transition:.3s;background:#11090766}
+.cta:hover{background:var(--gold);color:var(--dark)}
+.scroll{position:absolute;z-index:2;left:50%;bottom:26px;width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:drip 2.2s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* marquee */
+.marquee{overflow:hidden;border-block:1px solid var(--line);background:var(--ink);padding:20px 0;white-space:nowrap}
+.marquee div{display:inline-block;animation:slide 38s linear infinite;font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,38px);font-style:italic;color:var(--gold)}
+.marquee span{margin:0 28px;color:var(--red);font-style:normal}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* split */
+.split{display:grid;grid-template-columns:1fr 1.15fr;gap:6%;align-items:center}
+.frame{position:relative}
+.frame::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--gold);opacity:.55;z-index:0;transition:.4s}
+.frame:hover::before{inset:-8px 8px 8px -8px}
+.frame img{position:relative;z-index:1;width:100%;box-shadow:0 30px 70px #000a}
+.zoomable{cursor:zoom-in}
+.facts{display:grid;gap:22px;margin-top:30px}
+.facts div{border-left:1px solid var(--gold);padding-left:18px;font-size:14px;line-height:1.8;color:var(--muted)}
+.facts b{color:var(--gold);display:block;letter-spacing:.22em;text-transform:uppercase;font-size:10px;margin-bottom:4px}
+
+/* manifesto */
+.manifesto{background:var(--ink);text-align:center}
+.big-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,5.4vw,82px);line-height:1.04;max-width:1100px;margin:0 auto 26px}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:6%;max-width:1100px;margin:60px auto 0;text-align:left}
+.why h3{color:var(--gold);font-size:30px}
+.why p{font-size:15px;line-height:1.9;color:var(--muted)}
+.elements{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:70px;text-align:left;border-top:1px solid var(--line)}
+.el{padding:26px 22px 8px 0;border-right:1px solid var(--line);padding-left:22px}
+.el:first-child{padding-left:0}.el:last-child{border-right:0}
+.el small{font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--gold);display:block;line-height:1;margin-bottom:12px;opacity:.8}
+.el b{display:block;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px;margin-bottom:8px}
+.el span{font-size:13px;line-height:1.75;color:var(--muted)}
+
+/* collection rows */
+.col-head{text-align:center;margin-bottom:30px}
+.row{display:grid;grid-template-columns:minmax(280px,.8fr) 1fr;gap:8%;align-items:center;max-width:1180px;margin:0 auto;padding:70px 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.row.flip{grid-template-columns:1fr minmax(280px,.8fr)}
+.row.flip .pic{order:2}
+.pic{position:relative;overflow:hidden}
+.pic::before{content:"";position:absolute;inset:0;border:1px solid var(--gold);opacity:.35;z-index:2;pointer-events:none;transition:.4s}
+.pic:hover::before{inset:10px;opacity:.7}
+.pic img{width:100%;aspect-ratio:auto;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);box-shadow:0 30px 70px #000a}
+.pic:hover img{transform:scale(1.04)}
+.txt .no{font-family:'Cormorant Garamond',serif;font-size:clamp(90px,12vw,190px);line-height:.8;color:transparent;-webkit-text-stroke:1px var(--gold);opacity:.55;margin-bottom:10px}
+.txt .tag{font-size:10px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.txt p{font-size:15px;line-height:1.9;color:var(--muted);max-width:460px}
+.purpose{border-left:1px solid var(--gold);padding-left:16px;margin-top:22px;font-size:13px;line-height:1.75;color:#cdbda9;max-width:460px}
+.purpose b{display:block;font-size:10px;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;margin-bottom:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chips span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line);padding:7px 12px;color:#c7aa8b}
+
+/* lookbook */
+.look{background:var(--ink);padding:100px 4%}
+.look-grid{display:grid;gap:26px;margin-top:40px}
+.look img{width:100%;box-shadow:0 30px 80px #000c}
+
+/* audience */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:56px;text-align:left}
+.stat{border:1px solid var(--line);padding:28px 26px;background:linear-gradient(160deg,#1f0d0c,#140908);transition:.35s}
+.stat:hover{border-color:var(--gold);transform:translateY(-6px)}
+.stat b{display:block;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.stat p{margin:0;font-size:14px;line-height:1.8;color:var(--muted)}
+.big-age{font-family:'Cormorant Garamond',serif;font-size:76px;color:var(--cream);line-height:1;margin-bottom:6px}
+.big-age small{font-size:22px;color:var(--gold);margin-left:6px;font-style:italic}
+
+/* campaign */
+.camp-img{margin:46px auto 0;max-width:1400px;position:relative}
+.camp-img img{width:100%;box-shadow:0 40px 90px #000c}
+.brief{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:50px;max-width:1400px;margin-inline:auto}
+.brief div{background:var(--dark);padding:26px;font-size:13.5px;line-height:1.8;color:var(--muted);transition:.3s}
+.brief div:hover{background:#1c0c0b}
+.brief b{display:block;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.brief em{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--cream)}
+.palette{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:60px 0 12px}
+.sw{width:70px;height:70px;border-radius:50%;border:1px solid #ffffff2a;transition:transform .3s;position:relative}
+.sw:hover{transform:translateY(-8px) scale(1.08)}
+.mood{margin:60px auto 0;max-width:1400px}
+.mood img{width:100%;box-shadow:0 40px 90px #000c}
+
+/* table */
+.table-wrap{max-width:1000px;margin:50px auto 0;overflow-x:auto}
+table{width:100%;border-collapse:collapse;text-align:left;font-size:14.5px}
+th,td{border-bottom:1px solid var(--line);padding:20px 22px;line-height:1.65}
+th{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;color:var(--gold);border-bottom:1px solid var(--gold)}
+td{color:var(--muted)}
+td:first-child{color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:22px;white-space:nowrap}
+tbody tr{transition:background .3s}
+tbody tr:hover{background:#1f0d0c}
+
+/* pop-up */
+.pop{min-height:92vh;display:flex;align-items:center;overflow:hidden;background:#000}
+.pop .bg{position:absolute;inset:0;background:url('assets/page13.png') center/cover;transform:scale(1.05)}
+.pop::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#110907f2 0%,#110907c4 35%,#11090714 75%)}
+.pop .in{position:relative;z-index:2;max-width:560px}
+.pop p{font-size:15px;line-height:1.95;color:var(--muted)}
+
+/* end */
+.end{min-height:560px;text-align:center;background:linear-gradient(#1b090ac0,#110907f0),url('assets/moodboard.png') center/cover,#1b090a;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.end h2{max-width:900px;font-size:clamp(44px,7vw,110px)}
+.credit{margin-top:34px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#c7aa8b}
+footer{padding:36px 7%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:10px;letter-spacing:.15em;color:#a9947f;border-top:1px solid var(--line);text-transform:uppercase;line-height:1.7}
+
+/* lightbox */
+#lb{position:fixed;inset:0;background:#0b0605f2;z-index:100;display:none;align-items:center;justify-content:center;padding:4vw;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-height:92vh;max-width:94vw;box-shadow:0 0 80px #000}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.hero .bg,.marquee div,.scroll{animation:none}.pic img{transition:none}}
+@media(max-width:1100px){.brief{grid-template-columns:1fr 1fr}.elements{grid-template-columns:1fr 1fr}.el{border-right:0;border-bottom:1px solid var(--line);padding-left:0}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:800px){
+nav .links{gap:12px;font-size:9px}nav .links a:nth-child(n+4){display:none}.brand{font-size:15px}
+section{padding:80px 6%}
+.split,.why,.row,.row.flip{grid-template-columns:1fr}
+.row.flip .pic{order:0}
+.row{gap:30px;padding:50px 0}
+.txt .no{font-size:110px}
+.elements,.stats,.brief{grid-template-columns:1fr}
+.pop::after{background:linear-gradient(0deg,#110907f2 30%,#11090733)}
+.pop{align-items:flex-end}
+.pop .in{padding-bottom:20px}
+.frame::before{inset:-8px 8px 8px -8px}
+th,td{padding:14px 10px}td:first-child{white-space:normal}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav id="nav">
+  <a class="brand" href="#home">SABYASACHI <span>×</span> <b>PRSH.</b></a>
+  <div class="links"><a href="#story">Story</a><a href="#collection">Collection</a><a href="#audience">Audience</a><a href="#campaign">Campaign</a><a href="#experience">Pop-up</a></div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="bg" id="herobg" role="img" aria-label="Models lounging on a crimson velvet sofa beside a leopard, in a palace interior"></div>
+  <div class="hero-copy">
+    <div class="eyebrow">A conceptual Diwali capsule collection</div>
+    <h1>The New<br><em class="i">Maharaja</em></h1>
+    <p>Royal heritage. Rebellious living.</p>
+    <a href="#collection" class="cta">Explore the collection</a>
+  </div>
+  <div class="scroll" aria-hidden="true"></div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div>
+  Royal heritage <span>✦</span> Rebellious living <span>✦</span> Velvet &amp; leopard <span>✦</span> Heritage × Streetwear × Lifestyle <span>✦</span> Diwali capsule <span>✦</span> Limited edition <span>✦</span>
+  Royal heritage <span>✦</span> Rebellious living <span>✦</span> Velvet &amp; leopard <span>✦</span> Heritage × Streetwear × Lifestyle <span>✦</span> Diwali capsule <span>✦</span> Limited edition <span>✦</span>
+</div></div>
+
+<main>
+<section id="story" class="alt split">
+  <div class="reveal">
+    <div class="eyebrow">01 / The vision</div>
+    <h2>Tradition,<br><em class="i">reimagined.</em></h2>
+    <p>The New Maharaja is a limited-edition Diwali home and lifestyle collection that brings together Sabyasachi's royal Indian heritage and PRSH. Studio's contemporary streetwear aesthetic.</p>
+    <p>The idea is to take the richness of traditional Indian royal homes and reinterpret it for a younger generation that loves fashion, streetwear and statement interiors.</p>
+    <div class="facts">
+      <div><b>Materials</b>Velvet, jacquard, dark wood, brass, satin, embroidered textiles and patterned ceramics.</div>
+      <div><b>Prints</b>Royal Bengal tigers, leopards, vintage florals, Mughal-inspired borders, paisley and occasional zebra print.</div>
+      <div><b>Streetwear twist</b>Oversized proportions, unexpected animal-print combinations, bold PRSH. graphics, relaxed styling and limited-edition collectible objects.</div>
+    </div>
+  </div>
+  <div class="frame reveal d2"><img class="zoomable" src="assets/page3.png" alt="The New Maharaja concept and creative direction board" loading="lazy"></div>
+</section>
+
+<section id="why" class="manifesto center">
+  <div class="eyebrow">02 / The thinking</div>
+  <div class="big-quote reveal">Heritage isn't a <em class="i">museum piece.</em><br>It's a way of living.</div>
+  <div class="rule"></div>
+  <div class="why">
+    <div class="reveal"><h3>Why rebranding?</h3><p>The aim isn't to change Sabyasachi's identity, but to reinterpret its heritage through a younger, more contemporary perspective. By introducing streetwear influences into luxury homeware, the collaboration explores a different way of experiencing traditional Indian design.</p></div>
+    <div class="reveal d2"><h3>What new do I bring to the brand?</h3><p>Through PRSH. Studio, a younger, more experimental side to Sabyasachi's traditional luxury aesthetic. Instead of focusing on clothing, a home and lifestyle collection that combines Indian heritage with modern streetwear influences.</p><p>Bold animal prints, oversized designs, vintage furniture and unexpected everyday objects make traditional Indian luxury feel more playful, contemporary and appealing to a younger generation.</p></div>
+  </div>
+  <div class="elements">
+    <div class="el reveal"><small>01</small><b>Streetwear Influence</b><span>Oversized silhouettes, bold graphics and unconventional styling in luxury homeware.</span></div>
+    <div class="el reveal d1"><small>02</small><b>New Product Categories</b><span>Expanding into furniture, homewear, dining sets, towels and collectible objects.</span></div>
+    <div class="el reveal d2"><small>03</small><b>Younger Audience</b><span>Heritage-inspired luxury made more relatable to Gen Z and young design enthusiasts.</span></div>
+    <div class="el reveal d3"><small>04</small><b>Unexpected Design</b><span>Royal Indian patterns mixed with leopard prints, vintage objects and contemporary details.</span></div>
+    <div class="el reveal d4"><small>05</small><b>Modern Festive Experience</b><span>Reimagining Diwali through a darker, more fashion-forward luxury aesthetic.</span></div>
+  </div>
+</section>
+
+<section id="collection" class="alt">
+  <div class="col-head reveal">
+    <div class="eyebrow">03 / The objects</div>
+    <h2>Five expressions<br><em class="i">of luxury.</em></h2>
+    <div class="note">Home · Lifestyle · Collectibles</div>
+  </div>
+
+  <article class="row">
+    <div class="pic reveal"><img class="zoomable" src="assets/couch.png" alt="The Maharaja Couch in crimson velvet with leopard cushions and tassels" loading="lazy"></div>
+    <div class="txt reveal d2">
+      <div class="no">01</div><div class="tag">Furniture</div>
+      <h3>The Maharaja Couch</h3>
+      <p>Brings traditional Indian motifs into modern living spaces through a statement sofa.</p>
+      <div class="purpose"><b>Purpose</b>To turn traditional Indian prints into a bold statement piece for modern interiors.</div>
+      <div class="chips"><span>Crimson velvet</span><span>Leopard motif</span><span>Tasselled fringe</span></div>
+    </div>
+  </article>
+
+  <article class="row flip">
+    <div class="pic reveal"><img class="zoomable" src="assets/homewear.png" alt="Embroidered velvet robe, satin pyjama set and leopard slippers" loading="lazy"></div>
+    <div class="txt reveal d2">
+      <div class="no">02</div><div class="tag">Homewear</div>
+      <h3>Royal Homewear</h3>
+      <p>Reimagines traditional Indian craftsmanship in comfortable, contemporary silhouettes.</p>
+      <div class="purpose"><b>Purpose</b>To combine the comfort of everyday loungewear with the richness of Indian textiles.</div>
+      <div class="chips"><span>Velvet robe</span><span>Satin set</span><span>Embroidered slippers</span></div>
+    </div>
+  </article>
+
+  <article class="row">
+    <div class="pic reveal"><img class="zoomable" src="assets/towels.png" alt="Heritage towel set in wine velvet, forest green and cream with leopard embroidery and PRSH. branding" loading="lazy"></div>
+    <div class="txt reveal d2">
+      <div class="no">03</div><div class="tag">Textiles</div>
+      <h3>The Heritage Towel Set</h3>
+      <p>Transforms everyday essentials into luxurious heritage-inspired pieces.</p>
+      <div class="purpose"><b>Purpose</b>To make everyday essentials feel luxurious through heritage-inspired prints and embroidery.</div>
+      <div class="chips"><span>Embroidered borders</span><span>Leopard crest</span><span>Three colourways</span></div>
+    </div>
+  </article>
+
+  <article class="row flip">
+    <div class="pic reveal"><img class="zoomable" src="assets/feast.png" alt="The Royal Feast dinnerware with leopard plates, crystal glasses and PRSH. napkin" loading="lazy"></div>
+    <div class="txt reveal d2">
+      <div class="no">04</div><div class="tag">Tableware</div>
+      <h3>The Royal Feast</h3>
+      <p>Brings traditional Indian craftsmanship into contemporary dining and festive gatherings.</p>
+      <div class="purpose"><b>Purpose</b>To create a modern dining experience that celebrates Indian heritage.</div>
+      <div class="chips"><span>Patterned ceramics</span><span>Gold-rim plates</span><span>Cut crystal</span></div>
+    </div>
+  </article>
+
+  <article class="row">
+    <div class="pic reveal"><img class="zoomable" src="assets/hotline.png" alt="The Royal Hotline: a gold rotary telephone upholstered in zebra print" loading="lazy"></div>
+    <div class="txt reveal d2">
+      <div class="no">05</div><div class="tag">Collectible</div>
+      <h3>The Royal Hotline</h3>
+      <p>A vintage everyday object reimagined as a collectible design piece.</p>
+      <div class="purpose"><b>Purpose</b>To transform a nostalgic object into a bold, contemporary luxury collectible.</div>
+      <div class="chips"><span>Zebra print</span><span>Brass fittings</span><span>Limited edition</span></div>
+    </div>
+  </article>
+</section>
+
+<section class="look center">
+  <div class="eyebrow">The lookbook</div>
+  <h2>The full <em class="i">capsule.</em></h2>
+  <div class="look-grid">
+    <img class="zoomable reveal" src="assets/page6.png" alt="Capsule overview: the Maharaja Couch, Royal Homewear and Heritage Towel Set" loading="lazy">
+    <img class="zoomable reveal" src="assets/page7.png" alt="Capsule overview: The Royal Feast and The Royal Hotline" loading="lazy">
+  </div>
+</section>
+
+<section id="audience" class="center">
+  <div class="eyebrow">04 / The audience</div>
+  <h2>Who it's <em class="i">for.</em></h2>
+  <p class="lead">Young, design-conscious luxury consumers who appreciate Indian heritage but enjoy expressing their individuality through fashion, interiors and unconventional statement pieces.</p>
+  <div class="stats">
+    <div class="stat reveal"><div class="big-age">22–40<small>yrs</small></div><b>Age range</b><p>Design-conscious luxury consumers.</p></div>
+    <div class="stat reveal d1"><b>Lifestyle</b><p>Fashion-forward, creative, socially active and interested in unique home décor.</p></div>
+    <div class="stat reveal d2"><b>Interests</b><p>Luxury fashion, streetwear, vintage furniture, art, Indian craftsmanship and collectible objects.</p></div>
+    <div class="stat reveal d3"><b>Shopping behaviour</b><p>Values exclusivity, quality, craftsmanship and limited-edition collaborations over mass-produced products.</p></div>
+  </div>
+  <p class="lead" style="margin-top:44px"><em class="i">Why it appeals —</em> it allows them to incorporate traditional Indian luxury into their everyday spaces in a bold, contemporary and unexpected way.</p>
+</section>
+
+<section id="campaign" class="alt center">
+  <div class="eyebrow">05 / The campaign</div>
+  <h2>Heritage for a<br><em class="i">new generation.</em></h2>
+  <div class="camp-img reveal"><img class="zoomable" src="assets/campaign.png" alt="Advertising campaign brief with a model reclining on the Maharaja Couch beside a leopard" loading="lazy"></div>
+  <div class="brief" style="text-align:left">
+    <div><b>01 · Overview</b>A multi-platform campaign for the Diwali Capsule Collection, reimagining Indian heritage through modern, everyday spaces.</div>
+    <div><b>02 · Objective</b>To showcase how Indian craftsmanship and heritage can live beyond traditional occasions — relevant, functional and desirable for a new generation.</div>
+    <div><b>03 · Target audience</b>Young, globally-minded consumers (Gen Z &amp; Millennials) who appreciate cultural heritage, art, design and contemporary luxury.</div>
+    <div><b>04 · Key message</b>Indian heritage isn't just for special occasions — it's a part of everyday life.</div>
+    <div><b>05 · Campaign tone</b>Luxurious, nostalgic, contemporary, cultural, expressive, intimate.</div>
+    <div><b>06 · Platforms</b>Print, digital, social media, OOH, editorial partnerships and in-store experience.</div>
+    <div><b>07 · Key visuals</b>Rich Indian textiles and prints · modern everyday settings · warm, cinematic lighting · tradition blended with contemporary style · the new Maharaja as a modern, global figure.</div>
+    <div><b>08 · Tagline</b><em>The New Maharaja</em><br><i>Heritage for a new generation.</i></div>
+  </div>
+  <div class="palette reveal" aria-label="Campaign colour palette">
+    <span class="sw" style="background:#4a0a14" title="Wine"></span><span class="sw" style="background:radial-gradient(circle at 30% 30%,#e3c27f,#a97a38)" title="Antique gold"></span><span class="sw" style="background:#efe3cf" title="Ivory"></span><span class="sw" style="background:#4b5230" title="Olive"></span><span class="sw" style="background:#33170f" title="Walnut"></span><span class="sw" style="background:#0b0b10" title="Ink"></span><span class="sw" style="background:#c9a98a" title="Sand"></span><span class="sw" style="background:#b8402a" title="Vermilion"></span>
+  </div>
+  <div class="note">Campaign palette</div>
+  <div class="mood reveal"><img class="zoomable" src="assets/moodboard.png" alt="Advertising inspiration board of palaces, velvet, leopard prints and florals" loading="lazy"></div>
+</section>
+
+<section id="products-table" class="center">
+  <div class="eyebrow">06 / At a glance</div>
+  <h2>Purpose of <em class="i">the products.</em></h2>
+  <div class="table-wrap reveal">
+    <table>
+      <thead><tr><th>Product</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>01 · The Maharaja Couch</td><td>To turn traditional Indian prints into a bold statement piece for modern interiors.</td></tr>
+        <tr><td>02 · Royal Homewear</td><td>To combine the comfort of everyday loungewear with the richness of Indian textiles.</td></tr>
+        <tr><td>03 · Heritage Towel Set</td><td>To make everyday essentials feel luxurious through heritage-inspired prints and embroidery.</td></tr>
+        <tr><td>04 · The Royal Feast</td><td>To bring traditional Indian craftsmanship into contemporary dining and festive gatherings.</td></tr>
+        <tr><td>05 · The Royal Hotline</td><td>To transform a vintage everyday object into a playful, collectible luxury piece.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="experience" class="pop">
+  <div class="bg" id="popbg" role="img" aria-label="Conceptual Diwali pop-up showroom with all five products"></div>
+  <div class="in reveal">
+    <div class="eyebrow">07 / Campaign launch · Pop-up experience</div>
+    <h2>Enter the<br><em class="i">new palace.</em></h2>
+    <p>Imagine a Diwali pop-up where the collection becomes an immersive world: the Maharaja Couch takes centre stage, Royal Homewear hangs on vintage rails, embroidered towels fill antique cabinets, the Royal Feast sets the table, and the Royal Hotline waits on a carved console.</p>
+    <p>An intimate, cinematic experience rooted in Indian opulence with a distinctly modern attitude.</p>
+  </div>
+</section>
+
+<section class="end">
+  <div class="eyebrow">Sabyasachi × PRSH. Studio</div>
+  <h2 class="reveal">Heritage is not a relic.<br><em class="i">It's a statement.</em></h2>
+  <a href="#home" class="cta">Back to the beginning ↑</a>
+  <div class="credit">Thank you · Prisha Agarwal</div>
+</section>
+</main>
+
+<footer>
+  <span>The New Maharaja · Concept website · Designed by Prisha Agarwal</span>
+  <span>Independent student design concept · Not an official collaboration · Not affiliated with or endorsed by Sabyasachi or any brand shown</span>
+</footer>
+
+<div id="lb" role="dialog" aria-label="Enlarged image"><img alt=""></div>
+
+<script>
+const nav=document.getElementById('nav'),bar=document.getElementById('bar'),hb=document.getElementById('herobg'),pb=document.getElementById('popbg');
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function onScroll(){
+  const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+  nav.classList.toggle('solid',y>40);
+  bar.style.width=(h>0?y/h*100:0)+'%';
+  if(!reduce){
+    if(y<innerHeight)hb.style.translate='0 '+(y*.12)+'px';
+    const r=pb.parentElement.getBoundingClientRect();
+    if(r.top<innerHeight&&r.bottom>0)pb.style.translate='0 '+((r.top)*-.08)+'px';
+  }
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>{i.style.visibility='hidden'}));
+const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+document.querySelectorAll('.zoomable').forEach(i=>i.addEventListener('click',()=>{lbi.src=i.src;lbi.alt=i.alt;lb.classList.add('on')}));
+lb.addEventListener('click',()=>lb.classList.remove('on'));
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+</script>
+</body>
+</html>
